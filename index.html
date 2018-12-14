@@ -3,49 +3,111 @@
     <head>
         <meta charset="utf-8">
         <title>Coding</title>
-        <style>
-            .mono {
-                font-family: mono;
-            }
-            body {
-                font-family: sans-serif;
-                margin-left: 15px;
-            }
-            .intro {
-                color: rgb(0, 186, 0);
-                font-weight: bold;
-            }
-            .green {
-                background-color: rgb(61, 255, 122);
-                border: double rgb(62, 214, 133) 6px;
-                padding: 5px;
-                color: rgb(255, 255, 255);
-                font-size: 22px;
-                font-weight: bold; 
-            }
-            .small {
-                font-size: 17px;
-            }
-            #title {
-                background-color: rgb(61, 255, 122);
-                border: double rgb(62, 214, 133) 6px;
-                padding: 5px;
-                color: rgb(255, 255, 255);
-            }
-        </style>
     </head>
+    <style>
+        #green {
+            color: rgb(0, 255, 102);
+        }
+        #title1 {
+            background-color: rgb(0, 255, 102);
+            padding: 7px;
+            font-family: arial;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            margin: -8px;
+            text-align: right;
+            border: double rgb(0, 255, 102) 4px;
+        }
+        #title2 {
+            background-color: rgb(0, 224, 90);
+            padding: 14px;
+            font-family: arial;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            margin-top: -53px;
+            margin-left: -9px;
+            position: fixed;
+            border: double rgb(0, 224, 90) 4px;
+            font-size: 21px;
+        }
+        #title3 {
+            background-color: rgb(8, 207, 88);
+            padding: 14px;
+            font-family: arial;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            margin-top: -53px;
+            margin-left: 74px;
+            position: fixed;
+            border: double rgb(8, 207, 88) 4px;
+            font-size: 21px;
+        }
+        #title4 {
+            background-color: rgb(9, 186, 80);
+            padding: 14px;
+            font-family: arial;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            margin-top: -53px;
+            margin-left: 214px;
+            position: fixed;
+            border: double rgb(9, 186, 80) 4px;
+            font-size: 21px;
+        }
+        #line {
+            background-color: rgb(214, 214, 214);
+            margin-top: 40px;
+            height: 2px;
+        }
+        #heading {
+            font-family: arial;
+            margin-top: 12px;
+        }
+        #theIntro {
+            font-family: monospace;
+            font-weight: bold;
+            color: rgb(2, 191, 9);
+        }
+        p {
+            font-size: 16px;
+            font-family: arial;
+        }
+    </style>
     <body>
-    <h1 id="title">Coding</h1>
-    <h3>Contents:</h3>
-    <li> <a href="#introduction">Introduction</a></li>
-    <li> <a href="#Programming-Languages">Programming Languages</a></li>
-    <li> <a href="#importance-of-coding">Why is Coding Important</a></li>
-    <h2 id="introduction"> Introduction</h2>
-    <p><span class="intro mono">My Passion Project is about coding.</span> Coding is a language that both humans <em>and</em> computers can understand. You have to follow syntax rules and put together the right symbols in the correct order to tell the computer what you want it to do. Coding is used to make software, apps, and websites... like this one!</p>
-    <p class="green">
-    <span id="Programming-Languages">Programming Languages</span><br>
-    <span class="small">There are many programming languages in the world. Scratch is a programming language that helps kids understand and visualize how to code. It uses blocks instead of syntax. HTML (Hypertext Markup Language) is a programming language that is used for making documents made up of a bunch of tags. CSS (Cascading Style Sheets) is used for styling your webpage and making it look unique and original. JS (Java Script) makes a webpage interactive for the user. Including games and animations. These are just some of the many programming languages that you can use to code.</span>
-    </p>
-    <h2 id="importance-of-coding">Why Coding is Important</h2>
-    <p><span class="intro mono">If you know how to code it can help with creativity.</span> It strengthens the ability to focus on detail and adds to your problem solving skills. You can develop websites, video games, software, or anything that your imagination can take you to with coding.  Many jobs require computer programming. <strong style="color: rgb(14, 89, 23);">Start learning now!</strong></p>
+        <h1 id="title1">Coding<span id="green"></span></h1>
+        <button id="title2">Intro</button>
+        <button id="title3">Pro. Lang.</button>
+        <button id="title4">Why Coding?</button>
+        <div id="line"></div>
+        <h1 id="heading">Introduction</h1>
+        <p id="p"><span id="theIntro">My Passion Project is about coding.</span> <span id="info">Coding is a Language that both humans <em>and</em> computers can understand. You have to follow syntax rules and put together the right symbols in the correct order to tell the computer what you want it to do. Coding is used to make software, apps, and websites... like this one!</span>
+
+</p>
     </body>
+    <script>
+        var intro = document.getElementById("title2");
+        var proLang = document.getElementById("title3");
+        var WhyCoding = document.getElementById("title4");
+        var heading = document.getElementById("heading");
+        var greenPart = document.getElementById("theIntro");
+        var info = document.getElementById("info");
+        var changeIntro = function() {
+            heading.textContent = "Introduction"
+            greenPart.textContent = "My Passion Project is about coding."
+            info.textContent = "Coding is a Language that both humans and computers can understand. You have to follow syntax rules and put together the right symbols in the correct order to tell the computer what you want it to do. Coding is used to make software, apps, and websites... like this one!"
+        }
+        var changeProLang = function() {
+            heading.textContent = "Programming Languages"
+            greenPart.textContent = "There are many programming languages in the world."
+            info.textContent = " Scratch is a programming language that helps kids understand and visualize how to code. It uses blocks instead of syntax. HTML (Hypertext Markup Language) is a programming language that is used for making documents made up of a bunch of tags. CSS (Cascading Style Sheets) is used for styling your webpage and making it look unique and original. JS (Java Script) makes a webpage interactive for the user. Including games and animations. These are just some of the many programming languages that you can use to code."
+        }
+        var changeWhyCoding = function() {
+            heading.textContent = "Why is Coding Important"
+            greenPart.textContent = "If you know how to code it can help with creativity."
+            info.textContent = " It strengthens the ability to focus on detail and adds to your problem solving skills. You can develop websites, video games, software, or anything that your imagination can take you to with coding. Many jobs require computer programming. Start learning now!"
+        }
+        intro.addEventListener("click", changeIntro);
+        proLang.addEventListener("click", changeProLang);
+        WhyCoding.addEventListener("click", changeWhyCoding);
+    </script>
+</html>
